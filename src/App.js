@@ -1,6 +1,10 @@
-import React, { useRef } from 'react';
+import React, { useRef, forwardRef } from 'react';
 
-function MyInput() {}
+const MyInput = forwardRef((props, ref) => {
+  {
+    return <input ref={ref} className="m-10" type="text" />;
+  }
+});
 
 function App() {
   const inputRef = useRef(null);
